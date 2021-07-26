@@ -5,7 +5,7 @@ body {
     text-transform: uppercase;
     letter-spacing: .5em;
     top: 15%;
-    background: linear-gradient(to right, #ff0000, #ffff00);
+    background: linear-gradient(to right, rgb(66, 204, 130), rgb(230, 224, 119));
 }
 
 h1 {
@@ -27,11 +27,17 @@ h3 {
 
 .align-wrapper {
     display: grid;
-    grid-template-columns: 50px 50px 100px;
-    column-gap: 20px;
+    column-gap: 35px;
     justify-content: center;
 }
 
+.color-picker{
+    grid-template-columns: 50px 50px 100px;
+}
+
+.bg-color{
+    grid-template-columns: 500px 65px;
+}
 
 
 .btn {
@@ -39,9 +45,21 @@ h3 {
     color: rgb(0, 0, 0);
     font-size: 15px;
     height: 27px;
+    border: 1px solid black;
+    border-radius: 5px;
     padding: 3.5px 3px;
     position: relative; 
     text-align: center;
     cursor: pointer;
 }
 
+.btn-copy {
+    right: 30px;
+    bottom: -10px;
+}
+
+.btn-copied {
+    width: 80px;
+    right: 30px;
+    bottom: -10px;
+}

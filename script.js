@@ -1,8 +1,29 @@
-var css = document.querySelector("h3");
+var css = document.querySelector("h3")
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 var randomBtn = document.querySelector(".btn-random");
+var copyBtn = document.querySelector(".btn-copy");
+
+function copyBackgroundColor(){
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(css);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    let res = document.execCommand("copy");
+    if (res){
+        copyBtn.classList.add("btn-copied");
+        copyBtn.innerHTML = "Copied!";
+        selection.removeAllRanges();
+        
+        setTimeout(()=>{
+            copyBtn.classList.remove("btn-copied");
+            copyBtn.innerHTML = "Copy";}, 800)
+        
+    }
+   
+}
 
 
 function getRandomColor(){
@@ -29,10 +50,10 @@ function randomizeGradient(){
 }
 
 
-setGradient();
 
 randomBtn.addEventListener('click', randomizeGradient)
 
 
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
+copyBtn.addEventListener("click", copyBackgroundColor);
