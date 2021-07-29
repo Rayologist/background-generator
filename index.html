@@ -11,14 +11,21 @@
     <h1>Background Generator</h1>
     <div class="align-wrapper color-picker">
         <input class="color1" type="color" name="color1" value="#42cc82">
-        <button class="btn btn-exchange"><img src="./images/arrow.png" style="height: 20px;"></button>
+        <button class="btn btn-exchange"><img src="./images/arrow.png"></button>
         <input class="color2" type="color" name="color2" value="#e6e077">
         <button class="btn btn-random">Randomize</button>
     </div>
     <h2>Current CSS Background</h2>
     <div class="align-wrapper bg-color">
+        <h3>CSS:</h3>
         <h3 id="full-css">linear-gradient(to right, rgb(66, 204, 130), rgb(230, 224, 119));</h3>
-        <button class="btn btn-copy">Copy</button>
+        <button class="btn btn-copy" id="full-css-btn">Copy</button>
+        <h3>RGB:</h3>
+        <h3 id="rgb">rgb(66, 204, 130), rgb(230, 224, 119)</h3>
+        <button class="btn btn-copy" id="rgb-btn">Copy</button>
+        <h3>HEX: </h3>
+        <h3 id="hex">#42cc82, #e6e077</h3>
+        <button class="btn btn-copy" id="hex-btn">Copy</button>
     </div>
     
     <script src="script.js"></script>

@@ -36,7 +36,8 @@ h3 {
 }
 
 .bg-color{
-    grid-template-columns: 500px 65px;
+    grid-template-columns: 100px 500px 65px;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 
@@ -68,4 +69,8 @@ h3 {
     background-color: transparent; 
     height: 30px;
     border: transparent;
+}
+
+.btn-exchange > img{
+    height: 20px;
 }
