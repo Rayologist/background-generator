@@ -32,7 +32,7 @@ h3 {
 }
 
 .color-picker{
-    grid-template-columns: 50px 50px 100px;
+    grid-template-columns: 50px 50px 50px 100px;
 }
 
 .bg-color{
@@ -62,4 +62,10 @@ h3 {
     width: 80px;
     right: 30px;
     bottom: -10px;
+}
+
+.btn-exchange {
+    background-color: transparent; 
+    height: 30px;
+    border: transparent;
 }
